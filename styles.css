@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #202040;
+    margin: 0;
+    color: #f4f4f4;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding-bottom: 3%;
+    font-size: 18px;
+}
+
+/* styling some html tags */
+img,
+i {
+    opacity: 1;
+    cursor: pointer;
+}
+
+img:hover,
+i:hover {
+    opacity: 0.7;
+}
+
+figcaption {
+    font-size: 0.8rem;
+}
+
+/* small classes used all over the HTML that performs some specific functions */
+.align-center {
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+}
+
+.flex {
+    display: flex;
+}
+
+.img-cropper {
+    border-radius: 50%;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 1px;
+}
+
+/* Styling the menubar shown at the top */
+.menubar {
+    grid-template-columns: 10% 30% 50% 7% 3%;
+    overflow: hidden;
+    align-items: center;
+    margin: 2% 3%;
+}
+
+.menubar #item3 input[type=text] {
+    border: 1px solid transparent;
+    border-radius: 15px;
+    padding: 1% 3%;
+    background-color: #323252;
+    color: #f4f4f4;
+    width: 70%;
+}
+
+/* Dividng the entire display in 2 columns*/
+#home {
+    grid-template-columns: 70% 30%;
+    padding-bottom: 3%;
+}
+
+/* Styling the left column */
+#home .main {
+    margin-left: 7%;
+}
+
+/* Carousel Styling */
+.main .carousel {
+    margin-bottom: 2%;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    height: 40vh;
+}
+
+.carousel .image img {
+    height: 95%;
+    width: 90%;
+    transition: height, width 500ms ease-in-out;
+}
+
+.carousel .image img:hover,
+#theme img:hover {
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Latest Releases */
+.main #release {
+    margin: 2% 0%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 2% 5%;
+}
+
+#release .item1,
+.sidebar .item1 {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    font-size: 0.7rem;
+}
+
+#release .item1 .song,
+.sidebar .item1 .song {
+    margin-top: 10%;
+}
+
+/* Mood Stations */
+#mood {
+    margin: 2% 0%;
+    background-color: #323252;
+    padding: 3%;
+    grid-template-columns: 1.5fr repeat(6, 1fr);
+}
+
+/* Theme */
+#theme {
+    margin: 2% 0%;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    height: 30vh;
+}
+
+/*  Popular Artists /Bollywood /English */
+#artists img {
+    width: 96%;
+}
+
+#artists,
+#bollywood,
+#english {
+    margin: 2% 0%;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+#bollywood img,
+#english img {
+    border: 1px solid transparent;
+    border-radius: 0.5rem;
+}
+
+/* Styling the Right Column */
+#home .sidebar {
+    margin-left: 10%;
+}
+
+.sidebar .item1 {
+    padding-bottom: 1%;
+}
+
+.heading {
+    justify-content: space-between;
+    margin-right: 23%;
+    margin-bottom: 7%;
+}
+
+.heading #b {
+    margin-top: 2%;
+    color: #8cba51;
+}
+
+#list {
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+/* Music player at the bottom */
+#taskbar {
+    background-color: #1b1b2f;
+    position: fixed;
+    bottom: 0;
+    height: 10vh;
+    padding: 1% 5%;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+#taskbar .item1 {
+    display: grid;
+    grid-template-columns: 0.6fr 1.5fr 1fr;
+    font-size: 0.8rem;
+}
+
+#taskbar .item1 .time {}
+
+#taskbar .playing {
+    font-size: 0.7rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+#taskbar .playing .options {
+    padding-top: 1%;
+    width: 65%;
+    justify-content: center;
+}
+
+.slider {
+    width: 70%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#taskbar .slider #bar1 {
+    width: 75%;
+    height: 4px;
+    border-radius: 5px;
+    background-color: #323252;
+}
+
+#taskbar .playing #bar2 {
+    width: 30%;
+    height: 120%;
+    background-color: #8cba51;
+    border-radius: 4px;
+}
+
+#taskbar .sound {
+    padding: 4% 10%;
+    font-size: 0.7rem;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#taskbar .sound #bar3 {
+    width: 30%;
+    height: 4px;
+    border-radius: 8px;
+    background-color: #323252;
+}
+
+#taskbar .sound #bar4 {
+    width: 30%;
+    height: 100%;
+    border-radius: 20px;
+    background-color: #8cba51;
+}
+
+/* Making the webpage run as per the device viewport width*/
+@media screen and (max-width:900px) {
+
+    #taskbar .item1,
+    #taskbar .sound,
+    #taskbar .playing {
+        font-size: 0.6rem;
+    }
+
+    .main .carousel {
+        height: 30vh;
+    }
+
+    body {
+        font-size: 16px;
+    }
+
+    figcaption,
+    #release .item1,
+    .sidebar .item1 {
+        font-size: 0.5rem;
+    }
+
+    #theme {
+        height: 20vh;
+    }
+
+    #taskbar {
+        padding: 2% 5%;
+    }
+}
+
+@media screen and (max-width:665px) {
+    #theme {
+        height: 16vh;
+    }
+
+    .sidebar,
+    #taskbar .sound,
+    #taskbar .item1 .time {
+        display: none;
+    }
+
+    #home {
+        display: inline-block;
+        margin-right: 7%;
+    }
+
+    .main .carousel {
+        height: 22vh;
+    }
+
+    #taskbar {
+        padding: 3% 5%;
+        grid-template-columns: repeat(2, 2fr);
+    }
+
+    img:hover,
+    i:hover {
+        opacity: 1;
+    }
+
+    .carousel .image img {
+        height: 95%;
+        width: 90%;
+        transition: height, width 500ms ease-in-out;
+    }
+
+    .carousel .image img:hover,
+    #theme img:hover {
+        height: 95%;
+        width: 90%;
+        border-radius: 0px;
+    }
+
+    body {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .main .carousel {
+        height: 15vh;
+    }
+
+    #theme {
+        height: 10vh;
+    }
+
+}

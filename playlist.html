@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlist</title>
+    <!-- CSS File -->
+    <link rel="stylesheet" href="styles2.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/logo1.jpg">
+
+    <!-- Icon Kit -->
+    <script src="https://kit.fontawesome.com/d7835fbeaf.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Menubar -->
+    <div class="menubar grid">
+        <div id="item1"><img src="images/logo1.jpg" class="img-cropper" alt="app-logo" width="30%"></div>
+        <div id="item2">Favourites</div>
+        <div id="item3"><input type="text" size="50" placeholder="&#128269; Search artists, songs or genres"></div>
+        <div id="item4"><i class="fas fa-bell"></i></div>
+        <div id="item5"><img src="images/account.jpg" class="img-cropper" alt="my-account" width="92%"></div>
+    </div>
+
+    <!-- Main Display -->
+    <div class="home align-center">
+        <i class="far fa-times-circle fa-4x"></i><br><br>
+        <span>Sorry, something went wrong.</span><br>
+        <span><small>That didn't work. Please have another go.</small></small></span>
+    </div>
+
+    <!-- Bottom Taskbar -->
+    <div class="status align-center">
+        No Internet Connection
+    </div>
+    <div id="taskbar" class="grid">
+        <div class="songName">
+            <div class="item1">
+                <div><img src="images/Whiskey_Lullaby.jpg" alt="" width="95%"> </div>
+                <div class="song">
+                    <strong>Whiskey Lullaby</strong><br>
+                    <small>Brad Paisley</small>
+                </div>
+                <div class="time">
+                    <i class="far fa-heart"></i>&emsp; <i class="fas fa-ban"></i>
+                </div>
+            </div>
+        </div>
+        <div class="playing flex align-center">
+            <div class="options flex align-center">
+                <i class="fas fa-random"></i>&emsp;&emsp;
+                <i class="fas fa-step-backward"></i>&emsp;&emsp;
+                <i class="far fa-play-circle"></i></i>&emsp;&emsp;
+                <i class="fas fa-step-forward"></i>&emsp;&emsp;
+                <i class="fas fa-redo"></i>
+            </div>
+            <div class="slider flex">
+                <span>1:39</span>
+                <div id="bar1">
+                    <div id="bar2"></div>
+                </div>
+                <span>4:44</span>
+            </div>
+        </div>
+        <div class="sound flex">
+            <div><i class="fas fa-bars"></i> </div>
+            <div><i class="fas fa-laptop"></i></div>
+            <div><i class="fas fa-volume-up"></i></div>
+            <div id="bar3">
+                <div id="bar4"></div>
+            </div>
+            <div><i class="fas fa-expand-alt"></i></div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
